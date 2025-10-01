@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIBER Settings</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"] { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VIBER Settings</h1>
+        <p>Configure the VIBER platform by providing the necessary API keys and endpoints below.</p>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="jwt_secret">JWT Secret</label>
+                <input type="text" id="jwt_secret" name="jwt_secret">
+            </div>
+            <div class="form-group">
+                <label for="google_ai_studio_api_key">Google AI Studio API Key</label>
+                <input type="text" id="google_ai_studio_api_key" name="google_ai_studio_api_key">
+            </div>
+            <div class="form-group">
+                <label for="openai_api_key">OpenAI API Key</label>
+                <input type="text" id="openai_api_key" name="openai_api_key">
+            </div>
+            <button type="submit">Save Settings</button>
+        </form>
+    </div>
+</body>
+</html>

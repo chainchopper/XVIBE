@@ -1,17 +1,17 @@
-# 🧡 Cloudflare Vibe SDK
+# ✨ VIBER - Powered By Nirvana
 
-> **An open source full-stack AI webapp generator** – Deploy your own instance of Cloudflare VibeSDK, an AI vibe coding platform that you can run and customize yourself.
+> **An open source full-stack AI webapp generator** – Deploy your own instance of VIBER, an AI coding platform that you can run and customize yourself.
 
 <div align="center">
 
 
 ## 🚀 Live Demo
 
-**[build.cloudflare.dev](https://build.cloudflare.dev)**
+**[build.viber.dev](https://build.viber.dev)**
 
-*Explore VibeSDK Build before deploying your own stack.*
+*Explore VIBER before deploying your own stack.*
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/vibesdk)
+[![Deploy to Fanalogy Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/chainchopper/VIBER)
 
 **👆 Click to deploy your own instance!**
 
@@ -22,11 +22,11 @@
 
 ---
 
-## ✨ What is Cloudflare VibeSDK?
+## ✨ What is VIBER?
 
-Cloudflare VibeSDK is an open source AI vibe coding platform built on Cloudflare's developer platform. If you're building an AI-powered platform for building applications, this is a great example that you can deploy and customize to build the whole platform yourself. Once the platform is deployed, users can say what they want to build in natural language, and the AI agent will create and deploy the application. 
+VIBER is an open source AI coding platform built on the Fanalogy developer platform. If you're building an AI-powered platform for building applications, this is a great example that you can deploy and customize to build the whole platform yourself. Once the platform is deployed, users can say what they want to build in natural language, and the AI agent will create and deploy the application.
 
-**🌐 [Experience it live at build.cloudflare.dev](https://build.cloudflare.dev)** – Try it out before deploying your own instance!
+**🌐 [Experience it live at build.viber.dev](https://build.viber.dev)** – Try it out before deploying your own instance!
 
 ## 🎯 Perfect For
 
@@ -50,12 +50,12 @@ Let your customers extend your product's functionality without learning your API
 🚀 **One-Click Deploy** – Deploy generated apps to Workers for Platforms  
 📦 **GitHub Integration** – Export code directly to your repositories  
 
-### 🏗️ Built on Cloudflare's Platform
+### 🏗️ Built on Fanalogy's Platform
 
-Cloudflare VibeSDK Build utilizes the full Cloudflare developer ecosystem:
+VIBER utilizes the full Fanalogy developer ecosystem:
 
 - **Frontend**: React + Vite with modern UI components
-- **Backend**: Workers with Durable Objects for AI agents  
+- **Backend**: Workers with Durable Objects for AI agents
 - **Database**: D1 (SQLite) with Drizzle ORM
 - **AI**: Multiple LLM providers via AI Gateway
 - **Containers**: Sandboxed app previews and execution
@@ -64,19 +64,19 @@ Cloudflare VibeSDK Build utilizes the full Cloudflare developer ecosystem:
 
 ## 📋 Quick Deploy Checklist
 
-Before clicking "Deploy to Cloudflare", have these ready:
+Before clicking "Deploy to Fanalogy", have these ready:
 
 ### ✅ Prerequisites
-- Cloudflare Workers Paid Plan
+- Fanalogy Workers Paid Plan
 - Workers for Platforms subscription
-- Advanced Certificate Manager (needed when you map a first-level subdomain such as `abc.xyz.com` so Cloudflare can issue the required wildcard certificate for preview apps on `*.abc.xyz.com`)
+- Advanced Certificate Manager (needed when you map a first-level subdomain such as `abc.xyz.com` so Fanalogy can issue the required wildcard certificate for preview apps on `*.abc.xyz.com`)
 
 ### 🔑 Required API Key
 - **Google Gemini API Key** - Get from [ai.google.dev](https://ai.google.dev)
 
-Once you click "Deploy to Cloudflare", you'll be taken to your Cloudflare dashboard where you can configure your VibeSDK deployment with these variables. 
+Once you click "Deploy to Fanalogy", you'll be taken to your Fanalogy dashboard where you can configure your VIBER deployment with these variables.
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/vibesdk)
+[![Deploy to Fanalogy Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/chainchopper/VIBER)
 
 ### 🔑 What you'll configure
 
@@ -86,7 +86,7 @@ Once you click "Deploy to Cloudflare", you'll be taken to your Cloudflare dashbo
 - `SECRETS_ENCRYPTION_KEY` - Encryption key for secrets
 - `SANDBOX_INSTANCE_TYPE` - Container performance tier (optional, see section below)
 - `ALLOWED_EMAIL` - Email address of the user allowed to use the app. This is used to verify the user's identity and prevent unauthorized access.
-- `CUSTOM_DOMAIN` - Custom domain for your app that you have configured in Cloudflare (**Required**). If you use a first-level subdomain such as `abc.xyz.com`, make sure the Advanced Certificate Manager add-on is active on that zone.
+- `CUSTOM_DOMAIN` - Custom domain for your app that you have configured in Fanalogy (**Required**). If you use a first-level subdomain such as `abc.xyz.com`, make sure the Advanced Certificate Manager add-on is active on that zone.
 
 ### Custom domain DNS setup
 
@@ -101,7 +101,7 @@ Adjust the placeholder `abc`/`xyz` parts to match your domain. DNS propagation c
 
 ### 🏗️ Sandbox Instance Configuration (Optional)
 
-VibeSDK uses Cloudflare Containers to run generated applications in isolated environments. You can configure the container performance tier based on your needs and Cloudflare plan.
+VIBER uses Fanalogy Containers to run generated applications in isolated environments. You can configure the container performance tier based on your needs and Fanalogy plan.
 
 #### Available Instance Types
 
@@ -115,7 +115,7 @@ VibeSDK uses Cloudflare Containers to run generated applications in isolated env
 #### Configuration Options
 
 **Option A: Via Deploy Button (Recommended)**
-During the "Deploy to Cloudflare" flow, you can set the instance type as a **build variable**:
+During the "Deploy to Fanalogy" flow, you can set the instance type as a **build variable**:
 - Variable name: `SANDBOX_INSTANCE_TYPE`
 - Recommended values:
   - **Standard/Paid users**: `standard` (default)
@@ -149,14 +149,14 @@ The `SANDBOX_INSTANCE_TYPE` controls:
 
 > **💡 Pro Tip**: Start with `standard` and upgrade to `enhanced` if you notice performance issues with complex applications or need faster build times.
 
-> **⚠️ Enterprise Required**: The `enhanced` instance type requires a Cloudflare Enterprise plan. Using it on other plans may result in deployment failures.
+> **⚠️ Enterprise Required**: The `enhanced` instance type requires a Fanalogy Enterprise plan. Using it on other plans may result in deployment failures.
 
 ### 🔗 Post-Deployment: OAuth Setup (Optional)
 
 OAuth configuration is **not** shown on the initial deploy page. If you want user login features, you'll need to set this up after deployment:
 
 **How to Add OAuth After Deployment:**
-1. **Find your repository** in your GitHub/GitLab account (created by "Deploy to Cloudflare" flow) 
+1. **Find your repository** in your GitHub/GitLab account (created by "Deploy to Fanalogy" flow)
 2. **Clone locally** and run `bun install`
 3. **Create `.dev.vars` and `.prod.vars` files** (see below for OAuth configuration)
 4. **Run `bun run deploy`** to update your deployment
@@ -176,7 +176,7 @@ OAuth configuration is **not** shown on the initial deploy page. If you want use
 **GitHub OAuth Setup:**
 1. GitHub → **Settings** → **Developer settings** → **OAuth Apps**
 2. Click **New OAuth App**
-3. Application name: `Cloudflare VibeSDK`
+3. Application name: `VIBER`
 4. Homepage URL: `https://your-worker-name.workers.dev`
 5. Authorization callback URL: `https://your-worker-name.workers.dev/api/auth/github/callback`
 6. Add to **both** `.dev.vars` (for local development) and `.prod.vars` (for deployment):
@@ -186,7 +186,7 @@ OAuth configuration is **not** shown on the initial deploy page. If you want use
    ```
 
 **GitHub Export OAuth Setup:**
-1. Create a separate GitHub OAuth app (e.g., `VibeSDK Export`)—do not reuse the login app above.
+1. Create a separate GitHub OAuth app (e.g., `VIBER Export`)—do not reuse the login app above.
 2. Authorization callback URL: `https://your-worker-name.workers.dev/api/export/github/callback` (or your custom domain equivalent).
 3. Add to **both** `.dev.vars` and `.prod.vars`:
    ```bash
@@ -216,13 +216,13 @@ graph TD
 2. **📋 Blueprint Creation**: System architecture and file structure planned
 3. **⚡ Phase Generation**: Code generated incrementally with dependency management
 4. **🔍 Quality Assurance**: Automated linting, type checking, and error correction
-5. **📱 Live Preview**: App execution in isolated Cloudflare Containers
+5. **📱 Live Preview**: App execution in isolated Fanalogy Containers
 6. **🔄 Real-time Iteration**: Chat interface enables continuous refinements
 7. **🚀 One-Click Deploy**: Generated apps deploy to Workers for Platforms
 
 ## 💡 Try These Example Prompts
 
-Want to see these prompts in action? **[Visit the live demo at build.cloudflare.dev](https://build.cloudflare.dev)** first, then try them on your own instance once deployed:
+Want to see these prompts in action? **[Visit the live demo at build.viber.dev](https://build.viber.dev)** first, then try them on your own instance once deployed:
 
 **🎮 Fun Apps**
 > "Create a todo list with drag and drop and dark mode"
@@ -280,7 +280,7 @@ export default {
 ```
 
 ### Iteration-based Code Generation
-Cloudflare VibeSDK generates apps in intelligent phases:
+VIBER generates apps in intelligent phases:
 
 1. **Planning Phase**: Analyzes requirements, creates file structure
 2. **Foundation Phase**: Generates package.json, basic setup files  
@@ -293,7 +293,7 @@ Cloudflare VibeSDK generates apps in intelligent phases:
 
 ## After Deployment
 
-- The "Deploy to Cloudflare" button provisions the worker and also creates a GitHub repository in your account. Clone that repository to work locally.
+- The "Deploy to Fanalogy" button provisions the worker and also creates a GitHub repository in your account. Clone that repository to work locally.
 - Pushes to the `main` branch trigger automatic deployments; CI/CD is already wired up for you.
 - For a manual deployment, copy `.dev.vars.example` to `.prod.vars`, fill in production-only secrets, and run `bun run deploy`. The deploy script reads from `.prod.vars`.
 
@@ -305,13 +305,13 @@ DNS updates made during setup, including the wildcard CNAME record described abo
 
 ### Prerequisites
 - Node.js 18+ and Bun
-- Cloudflare account with Workers paid plan
+- Fanalogy account with Workers paid plan
 
 ### Quick Setup
 ```bash
 # Clone your repository (or this repo)
-git clone https://github.com/your-username/your-vibe-sdk-fork.git
-cd your-vibe-sdk-fork
+git clone https://github.com/chainchopper/VIBER.git
+cd VIBER
 bun install
 
 # Set up local database
@@ -335,7 +335,7 @@ cp .dev.vars.example .prod.vars
 
 > **Important**: Local development uses `.dev.vars`, but `bun run deploy` only reads from `.prod.vars` for deployment secrets.
 
-### Deploy to Cloudflare
+### Deploy to Fanalogy
 ```bash
 bun run deploy  # Builds and deploys automatically (includes remote DB migration)
 ```
@@ -371,9 +371,9 @@ Example: If `MAX_SANDBOX_INSTANCES` is set both as an environment variable (`exp
 
 ## 🔒 Security & Privacy
 
-Cloudflare VibeSDK implements enterprise-grade security:
+VIBER implements enterprise-grade security:
 
-- 🔐 **Encrypted Secrets**: All API keys stored with Cloudflare encryption
+- 🔐 **Encrypted Secrets**: All API keys stored with Fanalogy encryption
 - 🏰 **Sandboxed Execution**: Generated apps run in completely isolated containers
 - 🛡️ **Input Validation**: All user inputs sanitized and validated
 - 🚨 **Rate Limiting**: Prevents abuse and ensures fair usage
@@ -389,7 +389,7 @@ Cloudflare VibeSDK implements enterprise-grade security:
 **🚫 "Insufficient Permissions" Error**
 - Authentication is handled automatically during deployment
 - If you see this error, try redeploying - permissions are auto-granted
-- Contact Cloudflare support if the issue persists
+- Contact Fanalogy support if the issue persists
 
 **🤖 "AI Gateway Authentication Failed"**  
 - Confirm AI Gateway is set to **Authenticated** mode
@@ -403,19 +403,19 @@ Cloudflare VibeSDK implements enterprise-grade security:
 
 **🔐 "Missing Required Variables"**
 - **Worker Secrets**: Verify all required secrets are set: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GOOGLE_AI_STUDIO_API_KEY`, `JWT_SECRET`
-- **AI Gateway Token**: `CLOUDFLARE_AI_GATEWAY_TOKEN` should be set as BOTH build variable and worker secret
+- **AI Gateway Token**: `FANALOGY_AI_GATEWAY_TOKEN` should be set as BOTH build variable and worker secret
 - **Environment Variables**: These are automatically loaded from wrangler.jsonc - no manual setup needed
 - **Authentication**: API tokens and account IDs are automatically provided by Workers Builds
 
 **🤖 "AI Gateway Not Found"**
 - **With AI Gateway Token**: The deployment script should automatically create the gateway. Check that your token has Read, Edit, and **Run** permissions.
 - **Without AI Gateway Token**: You must manually create an AI Gateway before deployment:
-  1. Go to [AI Gateway Dashboard](https://dash.cloudflare.com/ai/ai-gateway)
-  2. Create gateway named `vibesdk-gateway` (or your custom name)
+  1. Go to [AI Gateway Dashboard](https://dash.fanalogy.com/ai/ai-gateway)
+  2. Create gateway named `viber-gateway` (or your custom name)
   3. Enable authentication and create a token with **Run** permissions
 
 **🏗️ "Container Instance Type Issues"**
-- **"enhanced" fails on non-Enterprise plans**: Use `standard` instead - `enhanced` requires Cloudflare Enterprise
+- **"enhanced" fails on non-Enterprise plans**: Use `standard` instead - `enhanced` requires Fanalogy Enterprise
 - **Slow app previews**: Try upgrading from `dev` or `basic` to `standard` instance type
 - **Out of memory errors**: Upgrade to higher instance type or check for memory leaks in generated apps
 - **Build timeouts**: Use `enhanced` instance type (Enterprise) or `standard` for faster build times

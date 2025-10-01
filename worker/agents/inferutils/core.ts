@@ -280,6 +280,35 @@ export async function getConfigurationForModel(
             return {
                 baseURL: 'https://api.anthropic.com/v1/',
                 apiKey: env.ANTHROPIC_API_KEY,
+                defaultHeaders: {
+                    'x-api-key': env.ANTHROPIC_API_KEY,
+                    'anthropic-version': '2023-06-01'
+                }
+            };
+        } else if (provider === 'groq') {
+            return {
+                baseURL: 'https://api.groq.com/openai/v1',
+                apiKey: env.GROQ_API_KEY,
+            };
+        } else if (provider === 'ollama') {
+            return {
+                baseURL: env.OLLAMA_BASE_URL || 'http://localhost:11434/v1',
+                apiKey: 'ollama',
+            };
+        } else if (provider === 'llama.cpp') {
+            return {
+                baseURL: env.LLAMACPP_BASE_URL,
+                apiKey: 'llama.cpp',
+            };
+        } else if (provider === 'vllm') {
+            return {
+                baseURL: env.VLLM_BASE_URL,
+                apiKey: 'vllm',
+            };
+        } else if (provider === 'lmstudio') {
+            return {
+                baseURL: env.LMSTUDIO_BASE_URL,
+                apiKey: 'lmstudio',
             };
         }
         providerForcedOverride = provider as AIGatewayProviders;

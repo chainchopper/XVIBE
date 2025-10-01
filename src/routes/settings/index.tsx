@@ -62,7 +62,7 @@ import OpenAILogo from '@/assets/provider-logos/openai.svg?react';
 import AnthropicLogo from '@/assets/provider-logos/anthropic.svg?react';
 import GoogleLogo from '@/assets/provider-logos/google.svg?react';
 import CerebrasLogo from '@/assets/provider-logos/cerebras.svg?react';
-import CloudflareLogo from '@/assets/provider-logos/cloudflare.svg?react';
+import FanalogyLogo from '@/assets/provider-logos/fanalogy.svg?react';
 
 export default function SettingsPage() {
 	const { user } = useAuth();
@@ -458,7 +458,7 @@ export default function SettingsPage() {
 		'google-ai-studio': GoogleLogo,
 		google: GoogleLogo,
 		cerebras: CerebrasLogo,
-		cloudflare: CloudflareLogo,
+		cloudflare: FanalogyLogo,
 	};
 
 	const getProviderLogo = (
