@@ -9,6 +9,10 @@ export function getPreviewDomain(env: Env): string {
     if (env.CUSTOM_PREVIEW_DOMAIN && env.CUSTOM_PREVIEW_DOMAIN.trim() !== '') {
         return env.CUSTOM_PREVIEW_DOMAIN;
     }
+    // Default to 'localhost' for local development if CUSTOM_DOMAIN is not set
+    if (!env.CUSTOM_DOMAIN || env.CUSTOM_DOMAIN.trim() === '') {
+        return 'localhost';
+    }
     return env.CUSTOM_DOMAIN;
 }
 

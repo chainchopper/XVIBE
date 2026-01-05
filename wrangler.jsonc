@@ -147,7 +147,7 @@
         "DISPATCH_NAMESPACE": "viber-default-namespace",
         "ENABLE_READ_REPLICAS": "true",
         "CLOUDFLARE_AI_GATEWAY": "viber-gateway",
-        "CUSTOM_DOMAIN": "",
+        "CUSTOM_DOMAIN": "localhost",
         "MAX_SANDBOX_INSTANCES": "10",
         "SANDBOX_INSTANCE_TYPE": "standard"
     },

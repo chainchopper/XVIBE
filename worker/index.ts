@@ -70,11 +70,16 @@ const worker = {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		// --- Pre-flight Checks ---
 
-		// 1. Critical configuration check: Ensure custom domain is set.
-        const previewDomain = getPreviewDomain(env);
+		// 1. Configuration check: Ensure custom domain is set, warn if using default.
+		const previewDomain = getPreviewDomain(env);
 		if (!previewDomain || previewDomain.trim() === '') {
-			console.error('FATAL: env.CUSTOM_DOMAIN is not configured in wrangler.toml or the Cloudflare dashboard.');
+			console.error('FATAL: env.CUSTOM_DOMAIN is not configured and getPreviewDomain returned empty.');
 			return new Response('Server configuration error: Application domain is not set.', { status: 500 });
+		}
+		
+		// Warn if using default localhost domain (likely in development without explicit configuration)
+		if (previewDomain === 'localhost' && (!env.CUSTOM_DOMAIN || env.CUSTOM_DOMAIN.trim() === '')) {
+			console.warn('WARNING: Using default "localhost" for CUSTOM_DOMAIN. Set CUSTOM_DOMAIN in production deployments.');
 		}
 
 		const url = new URL(request.url);
