@@ -71,7 +71,7 @@ const worker = {
 		// --- Pre-flight Checks ---
 
 		// 1. Configuration check: Ensure custom domain is set, warn if using default.
-        const previewDomain = getPreviewDomain(env);
+		const previewDomain = getPreviewDomain(env);
 		if (!previewDomain || previewDomain.trim() === '') {
 			console.error('FATAL: env.CUSTOM_DOMAIN is not configured and getPreviewDomain returned empty.');
 			return new Response('Server configuration error: Application domain is not set.', { status: 500 });
@@ -79,7 +79,7 @@ const worker = {
 		
 		// Warn if using default localhost domain (likely in development without explicit configuration)
 		if (previewDomain === 'localhost' && (!env.CUSTOM_DOMAIN || env.CUSTOM_DOMAIN.trim() === '')) {
-			console.warn('INFO: Using default "localhost" for CUSTOM_DOMAIN. Set CUSTOM_DOMAIN in production deployments.');
+			console.warn('WARNING: Using default "localhost" for CUSTOM_DOMAIN. Set CUSTOM_DOMAIN in production deployments.');
 		}
 
 		const url = new URL(request.url);
