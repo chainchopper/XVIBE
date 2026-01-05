@@ -1,61 +1,66 @@
 import { describe, it, expect } from 'vitest';
 import { getPreviewDomain, getProtocolForHost } from './urls';
 
+// Helper function to create mock Env objects for testing
+function createMockEnv(overrides: Partial<Env> = {}): Env {
+    return overrides as Env;
+}
+
 describe('URL utilities', () => {
     describe('getPreviewDomain', () => {
         it('should return CUSTOM_PREVIEW_DOMAIN when set', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_PREVIEW_DOMAIN: 'preview.example.com',
                 CUSTOM_DOMAIN: 'example.com',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('preview.example.com');
         });
 
         it('should return CUSTOM_DOMAIN when CUSTOM_PREVIEW_DOMAIN is not set', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_DOMAIN: 'example.com',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('example.com');
         });
 
         it('should return "localhost" as default when CUSTOM_DOMAIN is not set', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_DOMAIN: '',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('localhost');
         });
 
         it('should return "localhost" when CUSTOM_DOMAIN is undefined', () => {
-            const env = {} as any as Env;
+            const env = createMockEnv({});
 
             expect(getPreviewDomain(env)).toBe('localhost');
         });
 
         it('should return "localhost" when CUSTOM_DOMAIN is whitespace only', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_DOMAIN: '   ',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('localhost');
         });
 
         it('should ignore whitespace-only CUSTOM_PREVIEW_DOMAIN and use CUSTOM_DOMAIN', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_PREVIEW_DOMAIN: '   ',
                 CUSTOM_DOMAIN: 'example.com',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('example.com');
         });
 
         it('should return "localhost" when both CUSTOM_PREVIEW_DOMAIN and CUSTOM_DOMAIN are empty', () => {
-            const env = {
+            const env = createMockEnv({
                 CUSTOM_PREVIEW_DOMAIN: '',
                 CUSTOM_DOMAIN: '',
-            } as any as Env;
+            });
 
             expect(getPreviewDomain(env)).toBe('localhost');
         });
