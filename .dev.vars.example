@@ -1,5 +1,8 @@
 # Security Configuration
-#CUSTOM_DOMAIN="your-domain.com" # Your custom domain for CORS
+# CUSTOM_DOMAIN: The domain where your application will be deployed
+# - For local development: Use "localhost" (default)
+# - For production: Set to your actual domain (e.g., "your-domain.com")
+CUSTOM_DOMAIN="localhost"
 #ENVIRONMENT="prod" # Options: dev, staging, prod
 
 # Essential Secrets:
